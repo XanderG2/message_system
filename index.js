@@ -22,7 +22,8 @@ app.use(bodyParser.urlencoded());
 
 app.post("/", (request, response) => {
   console.log(request.body);
-  messages.push(request.body.message);
+  messages.push(request.body);
+
   response.setHeader("Location", "/");
   response.statusCode = 301;
   response.end();
@@ -41,10 +42,18 @@ Request counter: ${counter}<br />
 Path: ${request.url}<br />
 <h1>Messages</h1>
 <ul>
-  ${messages.map((msg) => `<li>${htmlentities(msg)}</li>`).join("\n  ")}
+  ${messages
+    .map(
+      (msg) =>
+        `<li>${htmlentities(msg.user)}: ${htmlentities(msg.message)}</li>`
+    )
+    .join("\n  ")}
 </ul>
-<h3>Add message</h3>
+
 <form method="POST">
+<h3>User</h3>
+<textarea name="user"></textarea/><br />
+<h3>Add message</h3>
   <textarea name="message"></textarea><br />
   <button type="submit">Send</button>
 </form>
