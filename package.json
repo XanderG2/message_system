@@ -1,0 +1,22 @@
+{
+  "name": "message_system",
+  "version": "1.0.0",
+  "description": "message system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XanderG2/message_system.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/XanderG2/message_system/issues"
+  },
+  "homepage": "https://github.com/XanderG2/message_system#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
