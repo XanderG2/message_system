@@ -1,6 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const PORT = 1025;
+const PORT = process.env.PORT || 1025;
 
 let counter = 0;
 const messages = [];
