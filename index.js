@@ -80,7 +80,6 @@ app.get(
 </head>
 <body>
 Request counter: ${counter}<br />
-Path: ${request.url}<br />
 <h1>Messages</h1>
 <ul>
   ${messages
