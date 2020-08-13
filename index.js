@@ -16,6 +16,8 @@ const HTML_ENTITY_LOOKUP = {
   ">": "&gt;",
   "&": "&amp;",
   '"': "&quot;",
+  "😀": "&#128512;",
+  "😎": "&128526;",
 };
 
 function htmlentities(text) {
